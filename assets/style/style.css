@@ -46,10 +46,6 @@ footer{
     gap: 10px;
 
 }
-.box{
-
-}
-
 .grid-photo{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
