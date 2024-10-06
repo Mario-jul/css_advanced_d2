@@ -1,82 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
-    background-color: rgb(198, 198, 198);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    background-color: rgb(182, 182, 182);
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'aside main'
+    'footer footer'
+    ;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    min-height: 100vh;
 }
 header{
-    display: flex;
     grid-area: header;
-    height: 100px;
-    background-color: rgb(55, 55, 108);
+    background-color: rgb(53, 53, 139);
+    padding: 1rem;
     color: white;
-    justify-content: center;
 }
-.title{
-
-}
-nav{
-    grid-area: nav;
-    width: 20vw;
+aside{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    margin-left: 50px;
+    grid-area: aside;
+    padding: 1rem;
     font-size: x-large;
-
+    gap: 30px;
 }
 main{
     grid-area: main;
-    height: 80vh;
-    width: 80vw;
+    padding: 1rem;
+}
+.grid-photo{
     display: flex;
-    flex-wrap: nowrap;
-
-
+    flex-wrap: wrap;
+}
+.grid-item{
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10%;
+}
+button{
+    background-color: rgb(53, 53, 139);
+    color: white;
+    width: 80%;
+    height: 30px;
 }
 footer{
     grid-area: footer;
-    height: 50px;
-    background-color: white;
-}
-.grid-container{
-    display: grid;
-    grid-template-areas: 
-    'header header'
-    'nav main'
-    'footer footer' ;
-    gap: 10px;
-
-}
-.grid-photo{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    
-    
-}
-.grid-item{
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    padding: 30px;
-
-}
-img{
-
-    height: 200px;
-    width: 180px;
-    
-}
-h2,h3,.comprar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-button{
-    background-color: rgb(55, 55, 108);
+    background-color: rgb(53, 53, 139);
+    padding: 1rem;
     color: white;
-    height: 30px;
-    width: 100%;
 }
